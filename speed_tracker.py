@@ -72,12 +72,12 @@ cv2.destroyWindow(window_title)
 src_pixels = np.float32(clicked_points)
 
 # Known real-world physical road dimensions in meters (Width x Length)
-# Example: 3.6 meters wide x 25.0 meters long
+# 4 lanes x 3.5 meters per lane = 14.0 meters wide x 30.0 meters long
 dst_meters = np.float32([
     [0.0,  0.0],   # Top-Left
-    [3.6,  0.0],   # Top-Right
-    [3.6, 25.0],   # Bottom-Right
-    [0.0, 25.0]    # Bottom-Left
+    [14.0, 0.0],   # Top-Right  (4 lanes x 3.5m)
+    [14.0, 30.0],  # Bottom-Right
+    [0.0,  30.0]   # Bottom-Left
 ])
 
 M = cv2.getPerspectiveTransform(src_pixels, dst_meters)
