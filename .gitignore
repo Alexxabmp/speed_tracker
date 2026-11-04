@@ -1,0 +1,12 @@
+# Video files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Python cache
+__pycache__/
+*.pyc
+
+# YOLO model weights
+*.pt
