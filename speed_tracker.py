@@ -11,7 +11,7 @@ VIDEO_PATH = "speed_tracker_vid.mp4"
 
 if not os.path.exists(VIDEO_PATH):
     print("Downloading sample traffic video...")
-    url = "https://github.com/intel-iot-devkit/sample-videos/raw/master/car-detection-0001.mp4"
+    url = "https://github.com/Alexxabmp/speed_tracker/releases/download/v1/speed_tracker_vid.mp4"
     urllib.request.urlretrieve(url, VIDEO_PATH)
     print("Download complete!\n")
 
