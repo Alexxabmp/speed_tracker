@@ -72,11 +72,11 @@ cv2.destroyWindow(window_title)
 src_pixels = np.float32(clicked_points)
 
 # Known real-world physical road dimensions in meters (Width x Length)
-# 4 lanes x 3.5 meters per lane = 14.0 meters wide x 30.0 meters long
+# 7 lanes total (3 left + 4 right) x 3.5m per lane = 24.5m wide x 30.0m long
 dst_meters = np.float32([
     [0.0,  0.0],   # Top-Left
-    [14.0, 0.0],   # Top-Right  (4 lanes x 3.5m)
-    [14.0, 30.0],  # Bottom-Right
+    [24.5, 0.0],   # Top-Right  (7 lanes x 3.5m)
+    [24.5, 30.0],  # Bottom-Right
     [0.0,  30.0]   # Bottom-Left
 ])
 
